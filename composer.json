@@ -9,7 +9,8 @@
     	},
         "files": [
           "src/sort.php",
-          "src/search.php"
+          "src/search.php",
+          "src/recursive.php"
         ]
     }
 }
