@@ -39,4 +39,23 @@ class Search_test extends \PHPUnit\Framework\TestCase {
             $this->assertEquals($expected, $result, $err);
         }
     }
+
+    public function test_binary_search(){
+        foreach ($this->cases as $case){
+            $haystack = $case['haystack'];
+            // binary search needs sorted array
+            sort($haystack);
+            $needle = $case['needle'];
+            // find needle is sorted array
+            $expected = array_search($needle, $haystack);
+            if($expected === false) {
+                $expected = -1;
+            }
+
+            $err = $case['err'];
+
+            $result = binary_search($haystack, $needle);
+            $this->assertEquals($expected, $result, $err);
+        }
+    }
 }
