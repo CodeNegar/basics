@@ -10,7 +10,8 @@
         "files": [
           "src/sort.php",
           "src/search.php",
-          "src/recursive.php"
+          "src/recursive.php",
+          "src/string.php"
         ]
     }
 }
