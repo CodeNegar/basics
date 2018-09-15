@@ -18,3 +18,7 @@ function pattern_matching_naive($haystack, $needle){
 
     return -1;
 }
+
+function pattern_matching_kmp($haystack, $needle){
+    // todo: complete the function and test
+}
