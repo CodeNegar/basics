@@ -31,8 +31,7 @@ function validate_balanced_braces($input){
         }
     }
 
-    if(count($stack) != 0){
-//        die(var_dump($stack, true));
+    if(!empty($stack)){
         return false;
     }
 
