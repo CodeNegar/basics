@@ -1,37 +1,31 @@
 <?php
 
-function validate_balanced_braces($input){
+function validate_balanced_braces($input)
+{
     $stack = [];
     $len = strlen($input);
 
-    for($i=0; $i<$len; $i++){
+    for ($i = 0; $i < $len; $i++) {
         $char = $input[$i];
 
-        if(
-            $char == '('
+        if ($char == '('
             || $char == '{'
-            || $char == '['
-        ){
+            || $char == '[') {
             array_push($stack, $char);
-        }elseif (
-            $char == ')'
+        } elseif ($char == ')'
             || $char == '}'
-            || $char == ']'
-        ){
+            || $char == ']') {
             $last_brace = array_pop($stack);
 
-            if(
-                $last_brace == '(' && $char != ')'
+            if ($last_brace == '(' && $char != ')'
                 || $last_brace == '{' && $char != '}'
-                || $last_brace == '[' && $char != ']'
-
-            ){
+                || $last_brace == '[' && $char != ']') {
                 return false;
             }
         }
     }
 
-    if(!empty($stack)){
+    if (!empty($stack)) {
         return false;
     }
 
