@@ -12,7 +12,8 @@
           "src/search.php",
           "src/recursive.php",
           "src/string.php",
-          "src/stack.php"
+          "src/stack.php",
+          "src/tree.php"
         ]
     }
 }
